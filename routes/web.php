@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/channels', 'ChannelController@index');
+Route::get('/channels/create', 'ChannelController@create');
+Route::post('/channels', 'ChannelController@store');
+Route::get('/channels/{id}/edit', 'ChannelController@edit');
+Route::put('/channels/{id}', 'ChannelController@update');
+Route::delete('/channels/{id}', 'ChannelController@destroy');
